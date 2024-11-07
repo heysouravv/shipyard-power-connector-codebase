@@ -1,18 +1,48 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "60cea657a300773ce6fcc42e8a742e23"
 name = "shipyard-power-connector"
-handle = "shipyard-power-connector"
-application_url = "https://shipyard--development.gadget.app/api/shopify/install-or-render"
+client_id = "60cea657a300773ce6fcc42e8a742e23"
+application_url = "https://removing-replaced-crops-shoulder.trycloudflare.com"
 embedded = true
+handle = "shipyard-power-connector"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_products,read_orders,read_customers,write_merchant_managed_fulfillment_orders,read_merchant_managed_fulfillment_orders,write_inventory,read_inventory,write_shipping,read_shipping,write_assigned_fulfillment_orders,read_assigned_fulfillment_orders,read_fulfillments"
+
+[access.admin]
+direct_api_mode = "online"
 
 [auth]
 redirect_urls = [
-  "https://shipyard--development.gadget.app/api/connections/auth/shopify/callback"
+  "https://removing-replaced-crops-shoulder.trycloudflare.com/auth/callback",
+  "https://removing-replaced-crops-shoulder.trycloudflare.com/auth/shopify/callback",
+  "https://removing-replaced-crops-shoulder.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
-api_version = "2024-10"
+api_version = "2024-07"
+
+  [[webhooks.subscriptions]]
+  topics = [
+  "products/create",
+  "products/update",
+  "products/delete",
+  "orders/create",
+  "orders/updated",
+  "orders/cancelled",
+  "inventory_levels/update",
+  "fulfillments/create",
+  "fulfillments/update",
+  "app/uninstalled"
+]
+  compliance_topics = [ "customers/redact", "customers/data_request", "shop/redact" ]
+  uri = "/webhooks"
 
 [pos]
 embedded = false
+
+[build]
+dev_store_url = "databun-test.myshopify.com"
+automatically_update_urls_on_dev = true
+include_config_on_deploy = true

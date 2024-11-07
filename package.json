@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-eventbridge": "^3.686.0",
+    "@aws-sdk/client-kinesis": "^3.686.0",
     "@prisma/client": "^5.11.0",
     "@remix-run/dev": "^2.7.1",
     "@remix-run/node": "^2.7.1",
