@@ -1,0 +1,18 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "60cea657a300773ce6fcc42e8a742e23"
+name = "shipyard-power-connector"
+handle = "shipyard-power-connector"
+application_url = "https://shipyard--development.gadget.app/api/shopify/install-or-render"
+embedded = true
+
+[auth]
+redirect_urls = [
+  "https://shipyard--development.gadget.app/api/connections/auth/shopify/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+
+[pos]
+embedded = false
