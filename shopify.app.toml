@@ -2,7 +2,7 @@
 
 name = "shipyard-power-connector"
 client_id = "60cea657a300773ce6fcc42e8a742e23"
-application_url = "https://removing-replaced-crops-shoulder.trycloudflare.com"
+application_url = "https://bryan-press-sterling-corpus.trycloudflare.com"
 embedded = true
 handle = "shipyard-power-connector"
 
@@ -15,9 +15,9 @@ direct_api_mode = "online"
 
 [auth]
 redirect_urls = [
-  "https://removing-replaced-crops-shoulder.trycloudflare.com/auth/callback",
-  "https://removing-replaced-crops-shoulder.trycloudflare.com/auth/shopify/callback",
-  "https://removing-replaced-crops-shoulder.trycloudflare.com/api/auth/callback"
+  "https://bryan-press-sterling-corpus.trycloudflare.com/auth/callback",
+  "https://bryan-press-sterling-corpus.trycloudflare.com/auth/shopify/callback",
+  "https://bryan-press-sterling-corpus.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
